@@ -1,0 +1,65 @@
+{% from "macros/nav.html" import header %}
+{% from "macros/footer.html" import footer %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gstyle.css') }}" />
+    <title>Greyscale</title>
+</head>
+
+<body>
+    {{ header() }}
+
+        <main class="main">
+            <div class="under">
+                <div class="imgc1">
+                    <img class="imagep1" src="static/svg/grayscale.png" alt="">
+                </div>
+            </div>
+            <div class='regform'>
+                <h1>Grayscale</h1>
+            </div>
+        
+            <form action='/greyed' class='main-form' method="POST" enctype="multipart/form-data">
+        
+                <div class='text-center'>
+                    <input type="file" id="file" name='file' style="margin-top:10px;margin-bottom:10px;">
+                    <button type='submit' class='btn btn-outline-primary'> Grayscale
+                    </button>
+                </div>
+        
+            </form>
+        
+            {% if grey_img_name %}
+            <div class="row" style="margin-top:10px;margin-bottom:10px;">
+                <div class="col text-center">
+                    <h2>Original Image</h2><img src='../static/uploads/{{ org_img_name }}'
+                        style="display: block;margin-left: auto;margin-right: auto;">
+                </div>
+                <div class="col text-center">
+                    <h2>Grayscale Image</h2><img src='../static/uploads/{{ grey_img_name }}'
+                        style="display: block;margin-left: auto;margin-right: auto;">
+                </div>
+                <div class="download">
+                    <form action="/download" method="POST">
+                        <button type='submit' class='btn btn-primary btn-lg' name="download" value="{{ grey_img_name }}"> Download
+                        </button>
+                    </form>
+                </div>
+            </div>
+            {% endif %}
+        </main>
+        
+    {{ footer() }}
+</body>
+
+</html>

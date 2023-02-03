@@ -1,0 +1,61 @@
+body {
+    font-family: sans-serif;
+}
+
+.regform {
+    width: 800px;
+    background-color: rgba(0, 0, 0, 0.877);
+    margin-top: -83px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFFFFF;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+
+}
+
+.main-form {
+    width: 800px;
+    margin: auto;
+    background-color: rgb(0, 0, 0, 0.7);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.download{
+    text-align: center;
+    padding-top: 80px;
+}
+
+.under{
+    width: vw;
+    height: 200px;
+    margin-top: -90px;
+    padding-top: 30px;
+    /* margin-left: -27px;
+    margin-right: -27px; */
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.74) , rgba(255, 255, 0, 0.637))
+}
+
+.imgc1{
+    display: flex;
+    justify-content: center;
+}
+.imagep{
+    width: 4.5rem;
+    height: 4.5rem;
+}
+.imagep1{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+img {
+    max-height: 400px;
+    max-width: 500px;
+    height: auto;
+    width: auto;
+}
